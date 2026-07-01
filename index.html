@@ -1,0 +1,1548 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Magali Depresbiteris — Terapeuta Sistêmica e Integrativa</title>
+  <meta name="description" content="Processos profundos para quem sente que é hora de se reposicionar na própria vida. Terapia Sistêmica e Integrativa, Constelação Familiar Sistêmica. Atibaia e online." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    /* ─── RESET & BASE ─── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 300;
+      color: #2C2C2C;
+      background: #FAF7F2;
+      line-height: 1.8;
+    }
+    img { max-width: 100%; display: block; }
+    a { text-decoration: none; color: inherit; }
+
+    /* ─── VARIABLES ─── */
+    :root {
+      --green:    #2D5A27;
+      --green-lt: #4A7A3D;
+      --gold:     #C4913A;
+      --gold-lt:  #D4A84B;
+      --cream:    #FAF7F2;
+      --cream-dk: #F0EAE0;
+      --text:     #2C2C2C;
+      --text-lt:  #5A5A5A;
+      --white:    #FFFFFF;
+    }
+
+    /* ─── UTILITY ─── */
+    .container { max-width: 1140px; margin: 0 auto; padding: 0 24px; }
+    .section-tag {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 14px;
+    }
+    .section-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(28px, 4vw, 44px);
+      font-weight: 500;
+      color: var(--green);
+      line-height: 1.25;
+      margin-bottom: 20px;
+    }
+    .section-text {
+      font-size: 15px;
+      color: var(--text-lt);
+      max-width: 640px;
+      line-height: 1.9;
+    }
+    .divider {
+      width: 48px;
+      height: 2px;
+      background: var(--gold);
+      margin: 20px 0 28px;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 14px 32px;
+      border-radius: 4px;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      transition: all 0.3s ease;
+      cursor: pointer;
+      border: none;
+    }
+    .btn-primary {
+      background: var(--green);
+      color: var(--white);
+    }
+    .btn-primary:hover { background: var(--green-lt); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(45,90,39,0.25); }
+    .btn-gold {
+      background: var(--gold);
+      color: var(--white);
+    }
+    .btn-gold:hover { background: var(--gold-lt); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(196,145,58,0.3); }
+    .btn-outline {
+      background: transparent;
+      color: var(--green);
+      border: 2px solid var(--green);
+    }
+    .btn-outline:hover { background: var(--green); color: var(--white); }
+
+    /* ─── HEADER / NAV ─── */
+    header {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      background: rgba(250, 247, 242, 0.95);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(196,145,58,0.2);
+      transition: box-shadow 0.3s;
+    }
+    header.scrolled { box-shadow: 0 4px 24px rgba(0,0,0,0.08); }
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 80px;
+    }
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    .nav-logo img {
+      height: 54px;
+      width: auto;
+    }
+    .nav-links {
+      display: flex;
+      gap: 32px;
+      list-style: none;
+    }
+    .nav-links a {
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--text);
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--gold); }
+    .nav-cta {
+      background: var(--green);
+      color: var(--white) !important;
+      padding: 8px 20px;
+      border-radius: 4px;
+    }
+    .nav-cta:hover { background: var(--green-lt) !important; color: var(--white) !important; }
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      padding: 4px;
+    }
+    .hamburger span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: var(--text);
+      transition: all 0.3s;
+    }
+
+    /* ─── HERO ─── */
+    #hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+      background: linear-gradient(135deg, #F7F2EA 0%, #EDE5D8 50%, #E8DED0 100%);
+      padding-top: 80px;
+    }
+    .hero-bg-pattern {
+      position: absolute;
+      inset: 0;
+      opacity: 0.04;
+      background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%232D5A27' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    }
+    .hero-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+      position: relative;
+      z-index: 1;
+    }
+    .hero-content {}
+    .hero-quote {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(34px, 5vw, 58px);
+      font-weight: 400;
+      font-style: italic;
+      color: var(--green);
+      line-height: 1.2;
+      margin-bottom: 24px;
+    }
+    .hero-quote span { color: var(--gold); }
+    .hero-sub {
+      font-size: 14px;
+      font-weight: 400;
+      color: var(--text-lt);
+      margin-bottom: 8px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+    .hero-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(22px, 3vw, 32px);
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 6px;
+    }
+    .hero-title {
+      font-size: 13px;
+      color: var(--gold);
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      font-weight: 500;
+      margin-bottom: 32px;
+    }
+    .hero-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 36px;
+    }
+    .hero-badge {
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 1px;
+      color: var(--green);
+      border: 1px solid rgba(45,90,39,0.3);
+      border-radius: 100px;
+      padding: 5px 14px;
+    }
+    .hero-btns {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+    .hero-image {
+      position: relative;
+    }
+    .hero-image-frame {
+      position: relative;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    .hero-image-frame::before {
+      content: '';
+      position: absolute;
+      inset: -12px;
+      border: 2px solid var(--gold);
+      border-radius: 12px;
+      z-index: -1;
+      opacity: 0.5;
+    }
+    .hero-image-frame img {
+      width: 100%;
+      height: 520px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+    .hero-tag {
+      position: absolute;
+      bottom: -20px;
+      left: -20px;
+      background: var(--green);
+      color: var(--white);
+      padding: 18px 24px;
+      border-radius: 8px;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.15);
+    }
+    .hero-tag strong {
+      display: block;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 20px;
+      font-weight: 500;
+    }
+    .hero-tag span {
+      font-size: 11px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      opacity: 0.8;
+    }
+    .hero-location {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      margin-top: 24px;
+      font-size: 13px;
+      color: var(--text-lt);
+    }
+    .hero-location svg { flex-shrink: 0; }
+
+    /* ─── SOBRE MIM ─── */
+    #sobre {
+      padding: 100px 0;
+      background: var(--white);
+    }
+    .sobre-inner {
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 80px;
+      align-items: center;
+    }
+    .sobre-images {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+    .sobre-img-main {
+      grid-column: 1 / -1;
+      border-radius: 8px;
+      overflow: hidden;
+      height: 300px;
+    }
+    .sobre-img-main img { width: 100%; height: 100%; object-fit: cover; }
+    .sobre-img-sub {
+      border-radius: 8px;
+      overflow: hidden;
+      height: 200px;
+    }
+    .sobre-img-sub img { width: 100%; height: 100%; object-fit: cover; }
+    .sobre-credentials {
+      margin-top: 32px;
+    }
+    .credential-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      padding: 12px 0;
+      border-bottom: 1px solid rgba(0,0,0,0.06);
+    }
+    .credential-icon {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: rgba(196,145,58,0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+    .credential-icon svg { color: var(--gold); }
+    .credential-text {
+      font-size: 14px;
+      color: var(--text-lt);
+      line-height: 1.5;
+    }
+    .credential-text strong { color: var(--text); font-weight: 600; display: block; }
+
+    /* ─── TRABALHO ─── */
+    #trabalho {
+      padding: 100px 0;
+      background: var(--cream-dk);
+    }
+    .trabalho-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: start;
+    }
+    .trabalho-content {}
+    .trabalho-pillars {
+      display: grid;
+      gap: 20px;
+    }
+    .pillar {
+      background: var(--white);
+      border-radius: 8px;
+      padding: 24px 28px;
+      border-left: 3px solid var(--gold);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .pillar:hover { transform: translateX(4px); box-shadow: 0 4px 20px rgba(0,0,0,0.08); }
+    .pillar-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--green);
+      margin-bottom: 8px;
+    }
+    .pillar-text {
+      font-size: 13.5px;
+      color: var(--text-lt);
+      line-height: 1.8;
+    }
+
+    /* ─── ACOMPANHAMENTO ─── */
+    #acompanhar {
+      padding: 100px 0;
+      background: var(--green);
+      position: relative;
+      overflow: hidden;
+    }
+    #acompanhar::before {
+      content: '';
+      position: absolute;
+      top: -100px; right: -100px;
+      width: 400px; height: 400px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.03);
+    }
+    .acompanhar-inner {
+      text-align: center;
+      max-width: 780px;
+      margin: 0 auto;
+    }
+    #acompanhar .section-tag { color: var(--gold-lt); }
+    #acompanhar .section-title { color: var(--white); }
+    #acompanhar .divider { margin: 20px auto 28px; }
+    #acompanhar .section-text { color: rgba(255,255,255,0.75); max-width: 100%; margin: 0 auto 20px; }
+    .acompanhar-quote {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(18px, 2.5vw, 24px);
+      font-style: italic;
+      color: rgba(255,255,255,0.9);
+      margin-top: 32px;
+      padding: 24px 32px;
+      border-left: 3px solid var(--gold);
+      text-align: left;
+      background: rgba(255,255,255,0.05);
+      border-radius: 0 8px 8px 0;
+    }
+
+    /* ─── SERVIÇOS ─── */
+    #servicos {
+      padding: 100px 0;
+      background: var(--cream);
+    }
+    .servicos-header { text-align: center; margin-bottom: 60px; }
+    .servicos-header .section-text { margin: 0 auto; }
+    .servicos-header .divider { margin: 20px auto 28px; }
+    .servicos-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+    }
+    .servico-card {
+      background: var(--white);
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.06);
+      transition: transform 0.3s, box-shadow 0.3s;
+      display: flex;
+      flex-direction: column;
+    }
+    .servico-card:hover { transform: translateY(-6px); box-shadow: 0 16px 48px rgba(0,0,0,0.12); }
+    .servico-img {
+      height: 200px;
+      overflow: hidden;
+      background: var(--cream-dk);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .servico-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s; }
+    .servico-card:hover .servico-img img { transform: scale(1.05); }
+    .servico-img-placeholder {
+      font-size: 48px;
+      opacity: 0.3;
+    }
+    .servico-body {
+      padding: 28px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+    .servico-num {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 10px;
+    }
+    .servico-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 22px;
+      font-weight: 600;
+      color: var(--green);
+      margin-bottom: 14px;
+      line-height: 1.3;
+    }
+    .servico-text {
+      font-size: 13.5px;
+      color: var(--text-lt);
+      line-height: 1.85;
+      flex: 1;
+    }
+    .servico-footer {
+      margin-top: 24px;
+      padding-top: 20px;
+      border-top: 1px solid rgba(0,0,0,0.06);
+    }
+    .servico-link {
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--green);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      transition: gap 0.2s;
+    }
+    .servico-link:hover { gap: 10px; color: var(--gold); }
+
+    /* ─── JORNADA DESTAQUE ─── */
+    #jornada {
+      padding: 100px 0;
+      background: linear-gradient(135deg, #2D5A27 0%, #1D3D1A 100%);
+      position: relative;
+      overflow: hidden;
+    }
+    #jornada::after {
+      content: '';
+      position: absolute;
+      bottom: -60px; right: -60px;
+      width: 300px; height: 300px;
+      border-radius: 50%;
+      border: 2px solid rgba(196,145,58,0.2);
+    }
+    .jornada-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+    #jornada .section-tag { color: var(--gold-lt); }
+    #jornada .section-title { color: var(--white); }
+    #jornada .divider { background: var(--gold); }
+    #jornada .section-text { color: rgba(255,255,255,0.75); max-width: 100%; }
+    .jornada-steps {
+      margin-top: 32px;
+      display: grid;
+      gap: 20px;
+    }
+    .jornada-step {
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+    }
+    .step-num {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: var(--gold);
+      color: var(--white);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+    .step-text {
+      font-size: 14px;
+      color: rgba(255,255,255,0.8);
+      line-height: 1.7;
+      padding-top: 8px;
+    }
+    .step-text strong { color: var(--white); }
+    .jornada-cta { margin-top: 36px; }
+    .jornada-image {
+      position: relative;
+    }
+    .jornada-image img {
+      width: 100%;
+      height: 460px;
+      object-fit: cover;
+      border-radius: 12px;
+      box-shadow: 0 24px 64px rgba(0,0,0,0.3);
+    }
+
+    /* ─── DEPOIMENTOS ─── */
+    #depoimentos {
+      padding: 100px 0;
+      background: var(--white);
+    }
+    .depoimentos-header { text-align: center; margin-bottom: 60px; }
+    .depoimentos-header .divider { margin: 20px auto 28px; }
+    .depoimentos-header .section-text { margin: 0 auto; }
+    .depoimentos-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+    }
+    .depoimento-card {
+      background: var(--cream);
+      border-radius: 12px;
+      padding: 32px 28px;
+      position: relative;
+    }
+    .depoimento-card::before {
+      content: '"';
+      position: absolute;
+      top: 16px;
+      left: 24px;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 72px;
+      color: var(--gold);
+      opacity: 0.3;
+      line-height: 1;
+    }
+    .depoimento-text {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 17px;
+      font-style: italic;
+      color: var(--text);
+      line-height: 1.7;
+      margin-bottom: 20px;
+      position: relative;
+      z-index: 1;
+    }
+    .depoimento-autor {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .autor-avatar {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--green), var(--gold));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--white);
+      font-weight: 600;
+      font-size: 15px;
+    }
+    .autor-info strong {
+      display: block;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--text);
+    }
+    .autor-info span {
+      font-size: 12px;
+      color: var(--text-lt);
+    }
+    .depoimento-stars {
+      display: flex;
+      gap: 3px;
+      margin-bottom: 16px;
+      color: var(--gold);
+      font-size: 14px;
+    }
+
+    /* ─── FAQ ─── */
+    #faq {
+      padding: 100px 0;
+      background: var(--cream-dk);
+    }
+    .faq-inner {
+      display: grid;
+      grid-template-columns: 1fr 1.5fr;
+      gap: 80px;
+      align-items: start;
+    }
+    .faq-sidebar { position: sticky; top: 100px; }
+    .faq-list { display: grid; gap: 12px; }
+    .faq-item {
+      background: var(--white);
+      border-radius: 8px;
+      overflow: hidden;
+      border: 1px solid rgba(0,0,0,0.06);
+    }
+    .faq-question {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 24px;
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--text);
+      transition: color 0.2s;
+      gap: 16px;
+    }
+    .faq-question:hover { color: var(--green); }
+    .faq-question.active { color: var(--green); }
+    .faq-icon {
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background: var(--cream-dk);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      transition: all 0.3s;
+      font-size: 16px;
+      color: var(--green);
+    }
+    .faq-question.active .faq-icon {
+      background: var(--green);
+      color: var(--white);
+      transform: rotate(45deg);
+    }
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease;
+    }
+    .faq-answer.open { max-height: 400px; }
+    .faq-answer-inner {
+      padding: 0 24px 20px;
+      font-size: 13.5px;
+      color: var(--text-lt);
+      line-height: 1.85;
+      border-top: 1px solid rgba(0,0,0,0.05);
+      padding-top: 16px;
+    }
+
+    /* ─── GALERIA ─── */
+    #galeria {
+      padding: 80px 0 0;
+      background: var(--cream);
+      overflow: hidden;
+    }
+    .galeria-header { text-align: center; margin-bottom: 48px; }
+    .galeria-header .divider { margin: 16px auto 0; }
+    .galeria-strip {
+      display: flex;
+      gap: 4px;
+      overflow-x: auto;
+      scrollbar-width: none;
+    }
+    .galeria-strip::-webkit-scrollbar { display: none; }
+    .galeria-item {
+      flex-shrink: 0;
+      width: 280px;
+      height: 280px;
+      overflow: hidden;
+      position: relative;
+    }
+    .galeria-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s;
+    }
+    .galeria-item:hover img { transform: scale(1.07); }
+
+    /* ─── AGENDAMENTO ─── */
+    #agendamento {
+      padding: 100px 0;
+      background: var(--cream);
+      text-align: center;
+    }
+    .agendamento-inner { max-width: 680px; margin: 0 auto; }
+    .agendamento-inner .divider { margin: 20px auto 28px; }
+    .agendamento-inner .section-text { margin: 0 auto 16px; }
+    .agendamento-modos {
+      display: flex;
+      justify-content: center;
+      gap: 24px;
+      margin: 32px 0;
+      flex-wrap: wrap;
+    }
+    .modo-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 14px;
+      color: var(--text-lt);
+    }
+    .modo-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: rgba(45,90,39,0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .modo-icon svg { color: var(--green); }
+    .agendamento-btns { display: flex; justify-content: center; gap: 14px; flex-wrap: wrap; }
+
+    /* ─── FOOTER ─── */
+    footer {
+      background: #1A3316;
+      color: rgba(255,255,255,0.7);
+      padding: 60px 0 32px;
+    }
+    .footer-inner {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr;
+      gap: 48px;
+      margin-bottom: 48px;
+    }
+    .footer-brand img { height: 60px; margin-bottom: 16px; filter: brightness(0) invert(1) opacity(0.9); }
+    .footer-brand p { font-size: 13px; line-height: 1.8; }
+    .footer-col h4 {
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--gold-lt);
+      margin-bottom: 16px;
+    }
+    .footer-col ul { list-style: none; display: grid; gap: 10px; }
+    .footer-col ul a {
+      font-size: 13px;
+      color: rgba(255,255,255,0.6);
+      transition: color 0.2s;
+    }
+    .footer-col ul a:hover { color: var(--gold-lt); }
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,0.1);
+      padding-top: 28px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 12px;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .footer-disclaimer {
+      font-size: 11px;
+      color: rgba(255,255,255,0.4);
+      max-width: 600px;
+      line-height: 1.6;
+      text-align: center;
+      margin: 0 auto 24px;
+    }
+
+    /* ─── WHATSAPP FLOAT ─── */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 28px;
+      right: 28px;
+      z-index: 999;
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      background: #25D366;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 8px 24px rgba(37,211,102,0.4);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .whatsapp-float:hover { transform: scale(1.1); box-shadow: 0 12px 32px rgba(37,211,102,0.5); }
+    .whatsapp-float svg { width: 28px; height: 28px; }
+
+    /* ─── MOBILE NAV OVERLAY ─── */
+    .mobile-nav {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 99;
+      background: var(--cream);
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 32px;
+    }
+    .mobile-nav.open { display: flex; }
+    .mobile-nav a {
+      font-size: 22px;
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 500;
+      color: var(--green);
+      letter-spacing: 1px;
+    }
+    .mobile-nav-close {
+      position: absolute;
+      top: 28px;
+      right: 28px;
+      font-size: 28px;
+      cursor: pointer;
+      color: var(--text);
+    }
+
+    /* ─── RESPONSIVE ─── */
+    @media (max-width: 900px) {
+      .nav-links { display: none; }
+      .hamburger { display: flex; }
+      .hero-inner { grid-template-columns: 1fr; }
+      .hero-image { display: none; }
+      .sobre-inner { grid-template-columns: 1fr; }
+      .sobre-images { display: none; }
+      .trabalho-inner { grid-template-columns: 1fr; }
+      .servicos-grid { grid-template-columns: 1fr; }
+      .jornada-inner { grid-template-columns: 1fr; }
+      .jornada-image { display: none; }
+      .depoimentos-grid { grid-template-columns: 1fr; }
+      .faq-inner { grid-template-columns: 1fr; }
+      .faq-sidebar { position: static; }
+      .footer-inner { grid-template-columns: 1fr; gap: 32px; }
+      .footer-bottom { flex-direction: column; text-align: center; }
+    }
+    @media (max-width: 600px) {
+      .galeria-item { width: 200px; height: 200px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- WHATSAPP FLOAT -->
+<!-- ATENÇÃO: Substitua 5500000000000 pelo número real de WhatsApp -->
+<a href="https://wa.me/5511989576929?text=Ol%C3%A1%2C%20Magali!%20Gostaria%20de%20agendar%20um%20atendimento." target="_blank" class="whatsapp-float" aria-label="WhatsApp">
+  <svg viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+  </svg>
+</a>
+
+<!-- MOBILE NAV OVERLAY -->
+<div class="mobile-nav" id="mobileNav">
+  <span class="mobile-nav-close" onclick="closeMobileNav()">✕</span>
+  <a href="#sobre" onclick="closeMobileNav()">Sobre Mim</a>
+  <a href="#trabalho" onclick="closeMobileNav()">Meu Trabalho</a>
+  <a href="#servicos" onclick="closeMobileNav()">Serviços</a>
+  <a href="#depoimentos" onclick="closeMobileNav()">Depoimentos</a>
+  <a href="#faq" onclick="closeMobileNav()">FAQ</a>
+  <a href="#agendamento" onclick="closeMobileNav()" style="color:var(--gold)">Agendar</a>
+</div>
+
+<!-- HEADER -->
+<header id="header">
+  <div class="container">
+    <nav>
+      <a href="#" class="nav-logo">
+        <img src="Logos - modelos/7.png" alt="Magali Depresbiteris — Terapeuta Sistêmica e Integrativa" />
+      </a>
+      <ul class="nav-links">
+        <li><a href="#sobre">Sobre Mim</a></li>
+        <li><a href="#trabalho">Meu Trabalho</a></li>
+        <li><a href="#servicos">Serviços</a></li>
+        <li><a href="#depoimentos">Depoimentos</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#agendamento" class="nav-cta">Agendar</a></li>
+      </ul>
+      <div class="hamburger" onclick="openMobileNav()" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-bg-pattern"></div>
+  <div class="container">
+    <div class="hero-inner">
+      <div class="hero-content">
+        <p class="hero-sub">Bem-vindo ao meu espaço</p>
+        <h1 class="hero-quote">
+          Processos profundos para quem sente que é hora de se
+          <span>reposicionar</span>
+          na própria vida.
+        </h1>
+        <p class="hero-name">Magali Depresbiteris</p>
+        <p class="hero-title">Terapeuta Sistêmica e Integrativa · Consteladora Familiar Sistêmica</p>
+        <div class="hero-badges">
+          <span class="hero-badge">Conecta</span>
+          <span class="hero-badge">Cura</span>
+          <span class="hero-badge">Transforma</span>
+          <span class="hero-badge">Ressigna</span>
+        </div>
+        <div class="hero-btns">
+          <a href="#agendamento" class="btn btn-primary">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Agendar pelo WhatsApp
+          </a>
+          <a href="#servicos" class="btn btn-outline">Conhecer os serviços</a>
+        </div>
+        <div class="hero-location">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <span>Atendimentos presenciais em Atibaia · Online para todo o mundo</span>
+        </div>
+      </div>
+      <div class="hero-image">
+        <div class="hero-image-frame">
+          <img src="Fotos/20250831_104848.jpg" alt="Sala de atendimento — constelação sistêmica com bonecos" />
+        </div>
+        <div class="hero-tag">
+          <strong>Corpo · Mente · Alma</strong>
+          <span>Sistema</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SOBRE MIM -->
+<section id="sobre">
+  <div class="container">
+    <div class="sobre-inner">
+      <div class="sobre-images">
+        <div class="sobre-img-main">
+          <img src="Fotos/20250831_104848.jpg" alt="Espaço de atendimento" />
+        </div>
+        <div class="sobre-img-sub">
+          <img src="Fotos/20260413_143219.jpg" alt="Bonecos de constelação" />
+        </div>
+        <div class="sobre-img-sub">
+          <img src="Fotos/20250922_162849.jpg" alt="Bonecos e cristais" />
+        </div>
+      </div>
+      <div>
+        <span class="section-tag">Sobre Mim</span>
+        <h2 class="section-title">Sou Magali Depresbiteris</h2>
+        <div class="divider"></div>
+        <p class="section-text" style="max-width:100%; margin-bottom:16px;">
+          Terapeuta Sistêmica e Integrativa e Consteladora Familiar Sistêmica. Acompanho pessoas que sentem que chegou o momento de olhar para a própria história com mais consciência, acolhimento e profundidade.
+        </p>
+        <p class="section-text" style="max-width:100%; margin-bottom:16px;">
+          Um espaço para reconhecer padrões, compreender vínculos e perceber os movimentos que influenciam sua forma de viver, sentir e se relacionar.
+        </p>
+        <p class="section-text" style="max-width:100%; margin-bottom:32px;">
+          Por meio da escuta terapêutica, da abordagem sistêmica e da constelação familiar, conduzo processos de reconexão, fortalecimento interno e novos posicionamentos diante da vida.
+        </p>
+
+        <div class="sobre-credentials">
+          <div class="credential-item">
+            <div class="credential-icon">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            </div>
+            <div class="credential-text">
+              <strong>Terapeuta Sistêmica e Integrativa</strong>
+              Formação em abordagem sistêmica integrada
+            </div>
+          </div>
+          <div class="credential-item">
+            <div class="credential-icon">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            </div>
+            <div class="credential-text">
+              <strong>Pós-graduação em Constelações Sistêmicas</strong>
+              Especialização em constelação familiar
+            </div>
+          </div>
+          <div class="credential-item">
+            <div class="credential-icon">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            </div>
+            <div class="credential-text">
+              <strong>Pós-graduação em Psicologia Analítica</strong>
+              Aprofundamento em processos analíticos
+            </div>
+          </div>
+          <div class="credential-item">
+            <div class="credential-icon">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
+            </div>
+            <div class="credential-text">
+              <strong>Cursando Pós-graduação em Psicanálise Clínica</strong>
+              Aprofundando a escuta e os movimentos internos
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SOBRE O TRABALHO -->
+<section id="trabalho">
+  <div class="container">
+    <div class="trabalho-inner">
+      <div class="trabalho-content">
+        <span class="section-tag">Sobre o meu trabalho</span>
+        <h2 class="section-title">Uma escuta que vai além das palavras</h2>
+        <div class="divider"></div>
+        <p class="section-text" style="max-width:100%; margin-bottom:20px;">
+          O meu trabalho se constrói a partir de uma escuta cuidadosa das experiências que se repetem, dos vínculos que marcam e dos sentimentos que ainda buscam compreensão. Acredito que o processo terapêutico é um caminho de consciência, onde cada pessoa pode olhar para sua história com mais clareza e responsabilidade.
+        </p>
+        <p class="section-text" style="max-width:100%;">
+          Minha prática integra a abordagem sistêmica, a constelação familiar, a psicologia analítica e os estudos em psicanálise clínica. Esses referenciais me permitem acolher tanto o que é dito quanto o que se revela nas entrelinhas. O processo acontece com presença, respeito e atenção à singularidade de cada pessoa.
+        </p>
+      </div>
+      <div class="trabalho-pillars">
+        <div class="pillar">
+          <p class="pillar-title">Abordagem Sistêmica</p>
+          <p class="pillar-text">Olho para a pessoa de forma ampla, considerando sua história, seus vínculos e os contextos que influenciam sua forma de sentir e agir.</p>
+        </div>
+        <div class="pillar">
+          <p class="pillar-title">Constelação Familiar</p>
+          <p class="pillar-text">Tornamos visíveis dinâmicas e vínculos que muitas vezes permanecem ocultos, mas que influenciam sentimentos, escolhas e padrões de repetição.</p>
+        </div>
+        <div class="pillar">
+          <p class="pillar-title">Psicologia Analítica</p>
+          <p class="pillar-text">Escuto além das palavras, reconhecendo também o que se expressa nos silêncios, nas emoções e nos padrões que se repetem ao longo da vida.</p>
+        </div>
+        <div class="pillar">
+          <p class="pillar-title">Psicanálise Clínica</p>
+          <p class="pillar-text">Amplio o olhar sobre a escuta, os movimentos internos e as camadas mais profundas da experiência humana.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COMO POSSO TE ACOMPANHAR -->
+<section id="acompanhar">
+  <div class="container">
+    <div class="acompanhar-inner">
+      <span class="section-tag">Como posso te acompanhar</span>
+      <h2 class="section-title">Cada pessoa chega em um momento único</h2>
+      <div class="divider"></div>
+      <p class="section-text">
+        Às vezes, pela dor de uma repetição. Às vezes, por um conflito nas relações. Outras vezes, por sentir que algo dentro de si pede mais presença, mais consciência e um novo lugar diante da vida.
+      </p>
+      <p class="section-text" style="margin-top:16px;">
+        Meus atendimentos são conduzidos com escuta, acolhimento e profundidade, respeitando a história, o tempo e a singularidade de cada processo. Através da Terapia Sistêmica e Integrativa e da Constelação Familiar Sistêmica, acompanho pessoas que desejam olhar para seus vínculos, reconhecer padrões emocionais e familiares, compreender movimentos internos e abrir espaço para novos posicionamentos.
+      </p>
+      <blockquote class="acompanhar-quote">
+        Não se trata de apagar a história, mas de olhar para ela de outro lugar. Um lugar com mais consciência, mais verdade e mais força.
+      </blockquote>
+    </div>
+  </div>
+</section>
+
+<!-- SERVIÇOS -->
+<section id="servicos">
+  <div class="container">
+    <div class="servicos-header">
+      <span class="section-tag">Serviços</span>
+      <h2 class="section-title">Formas de te acompanhar</h2>
+      <div class="divider"></div>
+      <p class="section-text">
+        Cada atendimento acontece com escuta, cuidado e respeito ao seu processo. Escolha o formato que melhor se encaixa ao seu momento.
+      </p>
+    </div>
+    <div class="servicos-grid">
+
+      <!-- Serviço 1 -->
+      <div class="servico-card">
+        <div class="servico-img">
+          <img src="Fotos/20250831_191357.jpg" alt="Terapia Sistêmica e Integrativa" />
+        </div>
+        <div class="servico-body">
+          <p class="servico-num">01 — Serviço</p>
+          <h3 class="servico-title">Terapia Sistêmica e Integrativa</h3>
+          <p class="servico-text">
+            Um espaço de escuta e acompanhamento para quem busca compreender com mais profundidade suas emoções, relações e padrões de comportamento. A abordagem olha para a pessoa de forma ampla, considerando sua história, seus vínculos e os contextos que influenciam sua forma de sentir e agir.
+          </p>
+          <div class="servico-footer">
+            <a href="#agendamento" class="servico-link">
+              Agendar atendimento
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Serviço 2 -->
+      <div class="servico-card">
+        <div class="servico-img">
+          <img src="Fotos/20260413_143219.jpg" alt="Constelação Sistêmica Individual com Bonecos" />
+        </div>
+        <div class="servico-body">
+          <p class="servico-num">02 — Serviço</p>
+          <h3 class="servico-title">Constelação Sistêmica Individual com Bonecos</h3>
+          <p class="servico-text">
+            Um espaço de escuta e investigação profunda voltado para quem deseja compreender questões pessoais, familiares, emocionais ou relacionais sob uma perspectiva sistêmica. Com o auxílio dos bonecos, é possível tornar visíveis dinâmicas e vínculos que influenciam sentimentos, escolhas e padrões de repetição ao longo da vida.
+          </p>
+          <div class="servico-footer">
+            <a href="#agendamento" class="servico-link">
+              Agendar atendimento
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Serviço 3 -->
+      <div class="servico-card">
+        <div class="servico-img">
+          <img src="Fotos/20250922_162849.jpg" alt="Jornada de Reposicionamento" />
+        </div>
+        <div class="servico-body">
+          <p class="servico-num">03 — Processo</p>
+          <h3 class="servico-title">Jornada de Reposicionamento</h3>
+          <p class="servico-text">
+            Um processo terapêutico completo para quem sente que precisa pausar, se escutar com mais profundidade e reorganizar sua forma de estar na vida. Inclui uma sessão de Constelação Familiar Sistêmica com bonecos + quatro encontros online e semanais, com acompanhamento contínuo.
+          </p>
+          <div class="servico-footer">
+            <a href="#jornada" class="servico-link">
+              Saber mais
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- JORNADA DESTAQUE -->
+<section id="jornada">
+  <div class="container">
+    <div class="jornada-inner">
+      <div>
+        <span class="section-tag">Processo Especial</span>
+        <h2 class="section-title">Jornada de Reposicionamento</h2>
+        <div class="divider"></div>
+        <p class="section-text">
+          Para quem deseja ir além da compreensão intelectual, se implicar no próprio processo e construir, com mais consciência e presença, uma nova forma de se posicionar diante da vida.
+        </p>
+        <div class="jornada-steps">
+          <div class="jornada-step">
+            <div class="step-num">1</div>
+            <p class="step-text"><strong>Sessão de Constelação Familiar Sistêmica com bonecos</strong> — acesso às dinâmicas invisíveis que influenciam suas relações, escolhas e emoções.</p>
+          </div>
+          <div class="jornada-step">
+            <div class="step-num">2</div>
+            <p class="step-text"><strong>Quatro encontros online e semanais</strong> — integração das percepções, com acompanhamento e direcionamento contínuo.</p>
+          </div>
+          <div class="jornada-step">
+            <div class="step-num">3</div>
+            <p class="step-text"><strong>Consolidação dos novos movimentos</strong> — clareza, acolhimento e sustentação para que mudanças reais se consolidem no dia a dia.</p>
+          </div>
+        </div>
+        <div class="jornada-cta">
+          <a href="#agendamento" class="btn btn-gold">Quero iniciar minha jornada</a>
+        </div>
+      </div>
+      <div class="jornada-image">
+        <img src="Fotos/20250831_104848.jpg" alt="Sala de atendimento" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DEPOIMENTOS -->
+<section id="depoimentos">
+  <div class="container">
+    <div class="depoimentos-header">
+      <span class="section-tag">Depoimentos</span>
+      <h2 class="section-title">Histórias que se transformaram</h2>
+      <div class="divider"></div>
+      <p class="section-text">
+        Cada pessoa que chega traz consigo uma história singular, um ritmo próprio e um momento único de vida. Esses relatos refletem experiências vividas em processos terapêuticos conduzidos com presença, respeito e cuidado.
+      </p>
+    </div>
+    <div class="depoimentos-grid">
+      <div class="depoimento-card">
+        <div class="depoimento-stars">★★★★★</div>
+        <p class="depoimento-text">
+          "O processo me ajudou a compreender padrões que eu repetia sem perceber. Hoje me relaciono de forma muito mais consciente comigo mesma e com as pessoas ao meu redor."
+        </p>
+        <div class="depoimento-autor">
+          <div class="autor-avatar">A</div>
+          <div class="autor-info">
+            <strong>Ana Paula</strong>
+            <span>Terapia Sistêmica e Integrativa</span>
+          </div>
+        </div>
+      </div>
+      <div class="depoimento-card">
+        <div class="depoimento-stars">★★★★★</div>
+        <p class="depoimento-text">
+          "A constelação com bonecos foi uma experiência reveladora. Ver representado o que eu sentia trouxe uma clareza que eu não conseguia alcançar de outra forma."
+        </p>
+        <div class="depoimento-autor">
+          <div class="autor-avatar">M</div>
+          <div class="autor-info">
+            <strong>Marina S.</strong>
+            <span>Constelação Sistêmica com Bonecos</span>
+          </div>
+        </div>
+      </div>
+      <div class="depoimento-card">
+        <div class="depoimento-stars">★★★★★</div>
+        <p class="depoimento-text">
+          "A Jornada de Reposicionamento me deu ferramentas reais para sustentar as mudanças. A Magali tem uma escuta profunda e acolhedora que faz toda a diferença no processo."
+        </p>
+        <div class="depoimento-autor">
+          <div class="autor-avatar">C</div>
+          <div class="autor-info">
+            <strong>Carla T.</strong>
+            <span>Jornada de Reposicionamento</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALERIA -->
+<section id="galeria">
+  <div class="container">
+    <div class="galeria-header">
+      <span class="section-tag">Espaço de atendimento</span>
+      <h2 class="section-title" style="font-size:clamp(22px,3vw,34px);">Conheça o ambiente</h2>
+      <div class="divider"></div>
+    </div>
+  </div>
+  <div class="galeria-strip">
+    <div class="galeria-item"><img src="Fotos/20250831_104848.jpg" alt="Sala de atendimento" /></div>
+    <div class="galeria-item"><img src="Fotos/20260413_143219.jpg" alt="Bonecos de constelação" /></div>
+    <div class="galeria-item"><img src="Fotos/20250831_191357.jpg" alt="Constelação em andamento" /></div>
+    <div class="galeria-item"><img src="Fotos/20250922_162849.jpg" alt="Bonecos e cristais" /></div>
+    <div class="galeria-item"><img src="Fotos/20251109_111835.jpg" alt="Detalhe do espaço" /></div>
+    <div class="galeria-item"><img src="Fotos/20250908_105806.jpg" alt="Ambiente terapêutico" /></div>
+    <div class="galeria-item"><img src="Fotos/20260329_124632.jpg" alt="Espaço de atendimento" /></div>
+    <div class="galeria-item"><img src="Fotos/20260427_160538.jpg" alt="Materiais de constelação" /></div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="container">
+    <div class="faq-inner">
+      <div class="faq-sidebar">
+        <span class="section-tag">Dúvidas</span>
+        <h2 class="section-title">Perguntas frequentes</h2>
+        <div class="divider"></div>
+        <p class="section-text">
+          Ficou com alguma dúvida que não encontrou aqui? Entre em contato pelo WhatsApp e eu te oriento com cuidado.
+        </p>
+        <br />
+        <a href="#agendamento" class="btn btn-primary" style="margin-top:8px;">Falar comigo</a>
+      </div>
+      <div class="faq-list">
+
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <span>Como funciona a Constelação Sistêmica Individual com Bonecos?</span>
+            <div class="faq-icon">+</div>
+          </div>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              A Constelação Sistêmica Individual com Bonecos é um atendimento conduzido de forma cuidadosa, em que olhamos para uma questão específica a partir da perspectiva sistêmica. Com o auxílio dos bonecos, é possível representar vínculos, relações e movimentos internos que muitas vezes atuam de forma silenciosa na vida da pessoa.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <span>A constelação pode ser feita online?</span>
+            <div class="faq-icon">+</div>
+          </div>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              Sim. A constelação pode acontecer tanto presencialmente, em Atibaia e região, quanto online. Em ambos os formatos, o processo é conduzido com presença, escuta e cuidado.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <span>O que é a Jornada de Reposicionamento?</span>
+            <div class="faq-icon">+</div>
+          </div>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              A Jornada de Reposicionamento é um processo mais completo, indicado para quem sente que precisa olhar para uma questão com mais profundidade e sustentar novos movimentos na vida prática. Ela inclui uma sessão individual de Constelação Familiar Sistêmica com bonecos, quatro encontros online e semanais, além de acompanhamento e direcionamento ao longo do processo.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <span>Para quem é indicada a Terapia Sistêmica e Integrativa?</span>
+            <div class="faq-icon">+</div>
+          </div>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              É indicada para pessoas que desejam compreender melhor suas emoções, relações, padrões de comportamento e movimentos internos. É um espaço de escuta e aprofundamento para quem sente que algo em sua vida pede mais consciência, cuidado e presença.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <span>Preciso já ter feito terapia ou constelação antes?</span>
+            <div class="faq-icon">+</div>
+          </div>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              Não. Cada processo começa a partir do momento em que a pessoa está. Não é necessário ter experiência anterior. O atendimento é conduzido respeitando a história, o tempo e a singularidade de cada pessoa.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <span>Quanto tempo dura um atendimento?</span>
+            <div class="faq-icon">+</div>
+          </div>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              A duração pode variar conforme o tipo de atendimento e a necessidade do processo. No momento do agendamento, todas as informações são alinhadas com clareza e cuidado.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <span>Como faço para agendar?</span>
+            <div class="faq-icon">+</div>
+          </div>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              O agendamento é realizado pelo WhatsApp. No primeiro contato, você pode compartilhar brevemente o que está buscando, e eu te oriento sobre o formato mais adequado para o seu momento.
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AGENDAMENTO -->
+<section id="agendamento">
+  <div class="container">
+    <div class="agendamento-inner">
+      <span class="section-tag">Agendamento</span>
+      <h2 class="section-title">Dê o primeiro passo</h2>
+      <div class="divider"></div>
+      <p class="section-text">
+        Se você sente que chegou o momento de olhar para a sua história com mais presença, acolher o que precisa ser visto e abrir espaço para novos movimentos, será um prazer te acompanhar.
+      </p>
+      <p class="section-text" style="margin-top:12px;">
+        Os atendimentos acontecem de forma individual, com escuta, cuidado e respeito ao seu processo.
+      </p>
+      <div class="agendamento-modos">
+        <div class="modo-item">
+          <div class="modo-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <span>Presencial em Atibaia e região</span>
+        </div>
+        <div class="modo-item">
+          <div class="modo-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+          </div>
+          <span>Online para qualquer lugar do mundo</span>
+        </div>
+      </div>
+      <div class="agendamento-btns">
+        <!-- ATENÇÃO: Substitua 5500000000000 pelo número real de WhatsApp -->
+        <a href="https://wa.me/5511989576929?text=Ol%C3%A1%2C%20Magali!%20Gostaria%20de%20agendar%20um%20atendimento." target="_blank" class="btn btn-primary">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Agendar pelo WhatsApp
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <p class="footer-disclaimer">
+      Os atendimentos terapêuticos oferecidos não substituem acompanhamento médico, psicológico ou psiquiátrico quando necessário. Cada processo é conduzido com ética, cuidado e respeito à singularidade de cada pessoa.
+    </p>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <img src="Logos - modelos/7.png" alt="Magali Depresbiteris" />
+        <p>Terapeuta Sistêmica e Integrativa<br />Consteladora Familiar Sistêmica<br />Atibaia · SP · Brasil</p>
+      </div>
+      <div class="footer-col">
+        <h4>Navegação</h4>
+        <ul>
+          <li><a href="#sobre">Sobre Mim</a></li>
+          <li><a href="#trabalho">Meu Trabalho</a></li>
+          <li><a href="#servicos">Serviços</a></li>
+          <li><a href="#depoimentos">Depoimentos</a></li>
+          <li><a href="#faq">Perguntas Frequentes</a></li>
+          <li><a href="#agendamento">Agendar</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Serviços</h4>
+        <ul>
+          <li><a href="#servicos">Terapia Sistêmica e Integrativa</a></li>
+          <li><a href="#servicos">Constelação com Bonecos</a></li>
+          <li><a href="#jornada">Jornada de Reposicionamento</a></li>
+        </ul>
+        <br />
+        <h4>Atendimento</h4>
+        <ul>
+          <li><a href="#agendamento">Presencial — Atibaia e região</a></li>
+          <li><a href="#agendamento">Online — todo o Brasil e mundo</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 Magali Depresbiteris. Todos os direitos reservados.</span>
+      <span>Corpo · Mente · Alma · Sistema</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Header scroll effect
+  const header = document.getElementById('header');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 40) header.classList.add('scrolled');
+    else header.classList.remove('scrolled');
+  });
+
+  // Mobile nav
+  function openMobileNav() {
+    document.getElementById('mobileNav').classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeMobileNav() {
+    document.getElementById('mobileNav').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  // FAQ accordion
+  function toggleFaq(el) {
+    const answer = el.nextElementSibling;
+    const isOpen = answer.classList.contains('open');
+
+    // Close all
+    document.querySelectorAll('.faq-answer').forEach(a => a.classList.remove('open'));
+    document.querySelectorAll('.faq-question').forEach(q => q.classList.remove('active'));
+
+    if (!isOpen) {
+      answer.classList.add('open');
+      el.classList.add('active');
+    }
+  }
+
+  // Intersection Observer for fade-in
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.style.opacity = '1';
+        entry.target.style.transform = 'translateY(0)';
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.servico-card, .pillar, .depoimento-card, .faq-item, .credential-item, .jornada-step').forEach(el => {
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(24px)';
+    el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+    observer.observe(el);
+  });
+</script>
+
+</body>
+</html>
