@@ -881,22 +881,81 @@
     @media (max-width: 900px) {
       .nav-links { display: none; }
       .hamburger { display: flex; }
-      .hero-inner { grid-template-columns: 1fr; }
-      .hero-image { display: none; }
-      .sobre-inner { grid-template-columns: 1fr; }
-      .sobre-images { display: none; }
-      .trabalho-inner { grid-template-columns: 1fr; }
+
+      /* Hero */
+      #hero { padding-top: 90px; }
+      .hero-inner { grid-template-columns: 1fr; gap: 32px; }
+      .hero-image { display: block; }
+      .hero-image-frame img { height: 300px; }
+      .hero-tag { bottom: -12px; left: 12px; padding: 12px 16px; }
+      .hero-tag strong { font-size: 16px; }
+      .hero-btns { flex-direction: column; }
+      .hero-btns .btn { width: 100%; justify-content: center; }
+
+      /* Sobre Mim */
+      #sobre { padding: 60px 0; }
+      .sobre-inner { grid-template-columns: 1fr; gap: 40px; }
+      .sobre-images { display: grid; }
+      .sobre-img-main { height: 280px; }
+      .sobre-img-sub { height: 160px; }
+
+      /* Trabalho */
+      #trabalho { padding: 60px 0; }
+      .trabalho-inner { grid-template-columns: 1fr; gap: 32px; }
+
+      /* Acompanhar */
+      #acompanhar { padding: 60px 0; }
+      .acompanhar-quote { padding: 16px 20px; font-size: 16px; }
+
+      /* Serviços */
+      #servicos { padding: 60px 0; }
       .servicos-grid { grid-template-columns: 1fr; }
-      .jornada-inner { grid-template-columns: 1fr; }
-      .jornada-image { display: none; }
+
+      /* Jornada */
+      #jornada { padding: 60px 0; }
+      .jornada-inner { grid-template-columns: 1fr; gap: 36px; }
+      .jornada-image { display: block; }
+      .jornada-image img { height: 260px; }
+
+      /* Depoimentos */
+      #depoimentos { padding: 60px 0; }
       .depoimentos-grid { grid-template-columns: 1fr; }
-      .faq-inner { grid-template-columns: 1fr; }
+
+      /* FAQ */
+      #faq { padding: 60px 0; }
+      .faq-inner { grid-template-columns: 1fr; gap: 40px; }
       .faq-sidebar { position: static; }
+
+      /* Galeria */
+      .galeria-item { width: 220px; height: 220px; }
+
+      /* Agendamento */
+      #agendamento { padding: 60px 0; }
+      .agendamento-modos { flex-direction: column; align-items: center; gap: 16px; }
+      .agendamento-btns { flex-direction: column; align-items: center; }
+      .agendamento-btns .btn { width: 100%; justify-content: center; }
+
+      /* Footer */
       .footer-inner { grid-template-columns: 1fr; gap: 32px; }
       .footer-bottom { flex-direction: column; text-align: center; }
+      footer { padding: 48px 0 24px; }
+
+      /* Seções gerais */
+      .section-title { font-size: clamp(24px, 6vw, 36px); }
     }
+
     @media (max-width: 600px) {
-      .galeria-item { width: 200px; height: 200px; }
+      .container { padding: 0 16px; }
+      .hero-quote { font-size: clamp(28px, 7vw, 40px); }
+      .galeria-item { width: 180px; height: 180px; }
+      .btn { font-size: 12px; padding: 13px 24px; }
+      .servico-body { padding: 20px; }
+      .depoimento-card { padding: 24px 20px; }
+      .pillar { padding: 18px 20px; }
+      .faq-question { padding: 16px 18px; font-size: 13px; }
+      .jornada-step { gap: 12px; }
+      .step-num { width: 30px; height: 30px; font-size: 12px; }
+      .whatsapp-float { bottom: 20px; right: 16px; width: 50px; height: 50px; }
     }
   </style>
 </head>
